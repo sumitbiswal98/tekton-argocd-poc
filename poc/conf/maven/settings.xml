@@ -4,27 +4,27 @@
     <server>
       <id>snapshots</id>
       <username>admin</username>
-      <password>admin123</password>
+      <password>ss</password>
     </server>
     <server>
       <id>releases</id>
       <username>admin</username>
-      <password>admin123</password>
+      <password>ss</password>
     </server>
   </servers>
   <mirrors>
     <mirror>
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>http://nexus:9001/repository/maven-public/</url>
+      <url>https://nexux-3-cicd1.apps.ocp4.imss.com/repository/maven-snapshots/</url>
     </mirror>
   </mirrors>
   <profiles>
     <profile>
       <id>nexus</id>
       <properties>
-        <altSnapshotDeploymentRepository>snapshots::default::http://nexus:9001/repository/maven-snapshots</altSnapshotDeploymentRepository>
-        <altReleaseDeploymentRepository>releases::default::http://nexus:9001/repository/maven-releases</altReleaseDeploymentRepository>
+        <altSnapshotDeploymentRepository>snapshots::default::https://nexux-3-cicd1.apps.ocp4.imss.com/repository/maven-snapshots</altSnapshotDeploymentRepository>
+        <altReleaseDeploymentRepository>releases::default::https://nexux-3-cicd1.apps.ocp4.imss.com/repository/maven-releases</altReleaseDeploymentRepository>
       </properties>
       <!--Enable snapshots for the built in central repo to direct -->
       <!--all requests to nexus via the mirror -->
