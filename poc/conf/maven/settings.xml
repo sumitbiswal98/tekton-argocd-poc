@@ -4,27 +4,27 @@
     <server>
       <id>snapshots</id>
       <username>admin</username>
-      <password>ss</password>
+      <password>admin123</password>
     </server>
     <server>
       <id>releases</id>
       <username>admin</username>
-      <password>ss</password>
+      <password>admin123</password>
     </server>
   </servers>
   <mirrors>
     <mirror>
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
-      <url>https://nexux-3-cicd1.apps.ocp4.imss.com/repository/maven-snapshots/</url>
+      <url>http://nexus-cicd.apps.cluster-mz8m9.mz8m9.sandbox2638.opentlc.com/repository/maven-public/</url>
     </mirror>
   </mirrors>
   <profiles>
     <profile>
       <id>nexus</id>
       <properties>
-        <altSnapshotDeploymentRepository>snapshots::default::https://nexux-3-cicd1.apps.ocp4.imss.com/repository/maven-snapshots</altSnapshotDeploymentRepository>
-        <altReleaseDeploymentRepository>releases::default::https://nexux-3-cicd1.apps.ocp4.imss.com/repository/maven-releases</altReleaseDeploymentRepository>
+        <altSnapshotDeploymentRepository>snapshots::default::http://nexus-cicd.apps.cluster-mz8m9.mz8m9.sandbox2638.opentlc.com/repository/maven-snapshots</altSnapshotDeploymentRepository>
+        <altReleaseDeploymentRepository>releases::default::http://nexus-cicd.apps.cluster-mz8m9.mz8m9.sandbox2638.opentlc.com/repository/maven-releases</altReleaseDeploymentRepository>
       </properties>
       <!--Enable snapshots for the built in central repo to direct -->
       <!--all requests to nexus via the mirror -->
